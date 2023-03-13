@@ -1,12 +1,14 @@
 <script>
 export default {
+  name: 'NavBar'
 }
 </script>
 
 <template>
   <div class="nav">
-    <div class="seg-small">
+    <div class="seg-small-1">
       <button class="logo-btn">
+        <img src="https://avatars.githubusercontent.com/u/59926121?v=4" class="avatar-logo" />
       </button>
     </div>
     <div class="seg-big">
@@ -15,9 +17,9 @@ export default {
       <div class="nav-item">Projects</div>
       <div class="nav-item">Blogs</div>
     </div>
-    <div class="seg-small">
+    <div class="seg-small-2">
       <button class="nav-btn">
-        Contact
+        Lets Meet!
       </button>
     </div>
   </div>
@@ -39,11 +41,18 @@ export default {
   justify-content: center;
 }
 
-.seg-small {
+.seg-small-1 {
   display: flex;
-  width: 7%;
+  width: 9%;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.seg-small-2 {
+  display: flex;
+  width: 9%;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .seg-big {
@@ -54,11 +63,11 @@ export default {
   align-items: center;
 }
 
-.nav-logo {}
 
 .nav-btn {
-  width: 100%;
-  background-color: #1e1e1e;
+  width: 90%;
+  /* background-color: #131263; */
+  background-color: #4e1263;
   border: none;
   height: fit-content;
   font-family: 'Rajdhani', sans-serif;
@@ -80,14 +89,42 @@ export default {
   cursor: pointer;
 }
 
+.avatar-logo {
+  width: 3.8rem;
+  border-radius: 36px;
+  cursor: pointer;
+}
+
 .logo-btn {
   border-radius: 36px;
+  border: none;
   background-color: transparent;
-  width: fit-content;
-  height: fit-content;
 }
 
 .nav-item:hover {
   color: grey;
+}
+
+@media (max-width: 900px) {
+  .seg-small {
+    width: 20%;
+  }
+
+  .seg-big {
+    width: 70%;
+  }
+
+  .avatar-logo {
+    width: 2rem;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+  }
+
+  .nav-btn {
+    width: 150%;
+    font-size: 0.8rem;
+  }
 }
 </style>

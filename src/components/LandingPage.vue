@@ -9,11 +9,10 @@
 
 <script>
 import LandingText from './LandingText.vue';
-
 export default {
   name: 'LandingPage',
   components: {
-    LandingText,
+    LandingText
   },
   methods: {
   },
@@ -30,8 +29,7 @@ export default {
 
 .left-box {
   display: flex;
-  width: 50vw !important;
-  animation: 1s ease-out 0s 1 slideFromTop;
+  width: 55vw;
   height: 100vh;
   background-color: transparent;
   justify-content: center;
@@ -40,9 +38,18 @@ export default {
 
 .right-box {
   display: flex;
-  width: 50vw;
-  animation: 1s ease-out 0s 1 slideFromTop;
+  width: 45vw;
   height: 100vh;
+}
+
+@media (max-width:900px) {
+  .left-box {
+    width: 100%;
+  }
+
+  .right-box {
+    display: none;
+  }
 }
 
 @keyframes slideFromTop {
