@@ -1,10 +1,12 @@
 <script>
 import LandingPage from './components/LandingPage.vue'
+import NavBar from './components/NavBar.vue'
 
 export default {
   name: 'App',
   components: {
-    LandingPage
+    LandingPage,
+    NavBar
   },
   methods: {
   }
@@ -13,6 +15,7 @@ export default {
 
 <template>
   <div>
+    <NavBar />
     <section id="Landing">
       <LandingPage />
     </section>

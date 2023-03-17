@@ -2,16 +2,20 @@
 <template>
   <div class="main-box">
     <div class="headbox">
-      <div class="pr">Hi There! <span class="highlight">I Am</span></div>
+      <div class="pr">Hi There! <span class="highlight">I Am</span> <span class="blink">|</span></div>
       <div class="head">Akshat Jaimini</div>
     </div>
+    <ButtonsBar />
   </div>
 </template>
 
 <script>
+import ButtonsBar from '../components/ButtonsBar.vue'
+
 export default {
   name: 'LandingPage',
   components: {
+    ButtonsBar
   }
 }
 </script>
@@ -26,6 +30,7 @@ export default {
   height: 100vh;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .headbox {
@@ -50,6 +55,21 @@ export default {
   color: black;
   padding-left: 3px;
   padding-right: 1px;
+}
+
+.blink {
+  color: white;
+  animation: blinkanim 1.5s steps(5, start) infinite;
+}
+
+@keyframes blinkanim {
+  0% {
+    color: black;
+  }
+
+  100% {
+    color: white;
+  }
 }
 
 .head {
@@ -84,6 +104,8 @@ export default {
 
   .head {
     text-align: center;
+    font-size: 3rem;
+    transition: none;
   }
 
   .pr {
