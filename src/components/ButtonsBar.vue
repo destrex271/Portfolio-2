@@ -40,6 +40,12 @@ export default {
   background: white;
   transition: background 0.3s ease-in;
   color: black;
+  cursor: pointer;
+}
+
+.button:active {
+  transform: translateY(0.1rem);
+  transition: transform 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 900px) {
