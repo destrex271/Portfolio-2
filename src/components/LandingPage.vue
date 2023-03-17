@@ -2,7 +2,7 @@
 <template>
   <div class="main-box">
     <div class="headbox">
-      <div class="pr">Hi There! <span class="highlight">I Am</span> <span class="blink">|</span></div>
+      <div class="pr">Hi There, <span class="highlight">I Am</span> <span class="blink">|</span></div>
       <div class="head">Akshat Jaimini</div>
     </div>
     <ButtonsBar />
@@ -59,7 +59,7 @@ export default {
 
 .blink {
   color: white;
-  animation: blinkanim 1.5s steps(5, start) infinite;
+  animation: blinkanim 1s steps(3, start) infinite;
 }
 
 @keyframes blinkanim {
