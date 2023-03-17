@@ -1,64 +1,96 @@
+
 <template>
-  <div class="main-body">
-    <div class="left-box">
-      <LandingText />
+  <div class="main-box">
+    <div class="headbox">
+      <div class="pr">Hi There! <span class="highlight">I Am</span></div>
+      <div class="head">Akshat Jaimini</div>
     </div>
-    <div class="right-box"></div>
   </div>
 </template>
 
 <script>
-import LandingText from './LandingText.vue';
 export default {
   name: 'LandingPage',
   components: {
-    LandingText
-  },
-  methods: {
-  },
+  }
 }
 </script>
 
 <style>
-.main-body {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  background-color: #f8f8f8;
-}
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
-.left-box {
+.main-box {
+  background-color: black;
   display: flex;
-  width: 55vw;
+  width: 100%;
   height: 100vh;
-  background-color: transparent;
   justify-content: center;
   align-items: center;
 }
 
-.right-box {
+.headbox {
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  justify-content: center;
   display: flex;
-  width: 45vw;
-  height: 100vh;
+  flex-direction: column;
+  position: relative;
 }
 
-@media (max-width:900px) {
-  .left-box {
-    width: 100%;
-  }
-
-  .right-box {
-    display: none;
-  }
+.pr {
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  display: flex;
 }
 
-@keyframes slideFromTop {
-  0% {
-    transform: translateY(-100%);
+.highlight {
+  background: white;
+  color: black;
+  padding-left: 3px;
+  padding-right: 1px;
+}
+
+.head {
+  font-family: "library3am";
+  font-weight: bold;
+  font-size: 5rem;
+  letter-spacing: 5px;
+}
+
+.head::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.head:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media (max-width: 900px) {
+  .headbox {
+    justify-content: center;
   }
 
-  100% {
-    transform: translateY(0);
+  .head {
+    text-align: center;
+  }
+
+  .pr {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2rem;
   }
 }
 </style>

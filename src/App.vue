@@ -1,26 +1,32 @@
-<template>
-  <NavBar />
-  <section>
-    <LandingPage />
-  </section>
-</template>
-
 <script>
-
 import LandingPage from './components/LandingPage.vue'
-import NavBar from './components/NavBar.vue';
 
 export default {
   name: 'App',
   components: {
-    LandingPage,
-    NavBar
+    LandingPage
+  },
+  methods: {
   }
 }
 </script>
 
+<template>
+  <div>
+    <section id="Landing">
+      <LandingPage />
+    </section>
+  </div>
+</template>
+
+
 <style>
-body{
+body {
   margin: 0;
+}
+
+@font-face {
+  font-family: "library3am";
+  src: url('./fonts/Library 3 am.otf');
 }
 </style>

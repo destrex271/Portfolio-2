@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@luxdamore/vue-cursor-fx": "^1.6.2",
     "core-js": "^3.8.3",
     "vue": "^3.2.13"
   },
