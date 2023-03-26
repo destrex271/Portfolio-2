@@ -27,7 +27,7 @@ export default {
   background-color: black;
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 95vh;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -79,23 +79,23 @@ export default {
   letter-spacing: 5px;
 }
 
-.head::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #fff;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.head:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
+/* .head::after { */
+/*   content: ''; */
+/*   position: absolute; */
+/*   width: 100%; */
+/*   transform: scaleX(0); */
+/*   height: 2px; */
+/*   bottom: 0; */
+/*   left: 0; */
+/*   background-color: #fff; */
+/*   transform-origin: bottom right; */
+/*   transition: transform 0.25s ease-out; */
+/* } */
+/**/
+/* .head:hover::after { */
+/*   transform: scaleX(1); */
+/*   transform-origin: bottom left; */
+/* } */
 
 @media (max-width: 900px) {
   .headbox {

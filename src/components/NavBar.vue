@@ -1,20 +1,25 @@
 <template>
   <div class="navbox">
     <div class="left">
-      <img src="@/assets/logo.jpg" class="logo" />
+      <img src="@/assets/logo.jpg" class="logo" @click="toSection('landing')" />
     </div>
     <div class="right">
-      <a class="nav-item"> About Me </a>
-      <a class="nav-item"> Blogs </a>
-      <a class="nav-item"> Projects</a>
-      <a class="nav-item"> Music </a>
+      <a class="nav-item" @click="toSection('about-dev')">About Me </a>
+      <a class="nav-item" @click="toSection('blogs')"> Blogs </a>
+      <a class="nav-item" @click="toSection('projects')"> Projects</a>
+      <a class="nav-item" @click="toSection('music')"> Music </a>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "NavBar"
+  name: "NavBar",
+  methods: {
+    toSection: (val) => {
+      document.getElementById(val).scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 }
 </script>
 
@@ -23,9 +28,9 @@ export default {
 
 .navbox {
   display: flex;
-  height: 5vw;
+  height: 10vh;
   width: 100%;
-  position: fixed;
+  position: sticky;
   background: #000;
   top: 0;
 }
@@ -65,6 +70,7 @@ export default {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-radius: 10px;
+  text-decoration: none;
 }
 
 .nav-item:hover {
@@ -77,7 +83,6 @@ export default {
   .navbox {
     flex-direction: column;
     height: 15vw;
-    margin-top: 1rem;
   }
 
   .left {

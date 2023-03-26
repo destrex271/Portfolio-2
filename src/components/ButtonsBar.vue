@@ -1,19 +1,22 @@
 <template>
   <div class="box">
-    <button class="button">Engineer</button>
+    <button class="button" @click="toSection('about-dev')">Engineer</button>
     <button class="button">Producer</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "ButtonsBar"
+  name: "ButtonsBar",
+  methods: {
+    toSection: (val) => {
+      document.getElementById(val).scrollIntoView({ behaviour: 'smooth' })
+    }
+  }
 }
 </script>
 
 <style>
-/* @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap'); */
-
 .box {
   display: flex;
   flex-direction: row;
@@ -22,7 +25,6 @@ export default {
   justify-content: center;
   align-content: center;
   margin-top: 2rem;
-  margin-bottom: -8rem;
 }
 
 .button {
