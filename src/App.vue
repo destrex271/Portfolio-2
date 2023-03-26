@@ -2,13 +2,15 @@
 import LandingPage from './components/LandingPage.vue'
 import NavBar from './components/NavBar.vue'
 import DeveLoper from './components/DeveLoper.vue'
+import BlogPosts from './components/BlogPosts.vue'
 
 export default {
   name: 'App',
   components: {
     LandingPage,
     NavBar,
-    DeveLoper
+    DeveLoper,
+    BlogPosts
   },
   data() {
     return {
@@ -28,6 +30,9 @@ export default {
     </section>
     <section id="about-dev">
       <DeveLoper :content="content" />
+    </section>
+    <section id="blogs">
+      <BlogPosts />
     </section>
   </div>
 </template>

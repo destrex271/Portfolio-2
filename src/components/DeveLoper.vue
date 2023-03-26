@@ -34,6 +34,7 @@ export default {
   display: flex;
   flex-direction: column;
   height: 90vh;
+  padding-top: 5rem;
 }
 
 .head-box-dev {

@@ -7,7 +7,7 @@ import { Navigation, Autoplay } from 'swiper'
     <div class="computer-div">
       <div class="main-scr">
         <swiper :modules="[Navigation, Autoplay]" :spaceBetween="10" :centeredSlides="true" :slides-per-view="1"
-          :space-between="10" @swiper="onSwiper" @slideChange="onSlideChange" :loop="true"
+          :space-between="10" @slideChange="onSlideChange" :loop="true"
           :autoplay="{ 'delay': 1000, 'disableOnInteraction': false }" style="width:100%;height: 100%;">
           <swiper-slide v-for="url in urls" :key="url.id">
             <div class="slide">
@@ -52,21 +52,21 @@ export default {
         { url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/590px-Node.js_logo.svg.png?20170401104355", id: 11, title: "Node.Js" },
         { url: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg", id: 12, title: "Python" },
         { url: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg", id: 13, title: "React.JS" },
-        { url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Rustacean-orig-noshadow.svg/1024px-Rustacean-orig-noshadow.svg.png", id: 14, title: "Rust" },
-        { url: "https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png", id: 13, title: "Docker" },
-        { url: "https://www.oracle.com/a/ocom/img/pl-sql.svg", id: 13, title: "SQL & PL/SQL" },
+        { url: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Rustacean-orig-noshadow.svg/1024px-Rustacean-orig-noshadow.svg.png", id: 15, title: "Rust" },
+        { url: "https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png", id: 15, title: "Docker" },
+        { url: "https://www.oracle.com/a/ocom/img/pl-sql.svg", id: 16, title: "SQL & PL/SQL" },
+        { url: "https://kelvinfan001.github.io/assets/img/actix/logo-large.png", id: 17, title: "Actix Web" },
       ]
     }
   },
   setup() {
-    const onSwiper = (swiper) => {
-      console.log(swiper);
-    };
+    /* const onSwiper = (swiper) => { */
+    /*   console.log(swiper); */
+    /* }; */
     const onSlideChange = () => {
       console.log('slide change');
     };
     return {
-      onSwiper,
       onSlideChange,
     };
   }
@@ -98,7 +98,7 @@ export default {
   height: inherit;
   background-color: black;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
 }
