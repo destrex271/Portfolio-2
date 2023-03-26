@@ -7,8 +7,8 @@ import { Navigation, Autoplay } from 'swiper'
     <div class="computer-div">
       <div class="main-scr">
         <swiper :modules="[Navigation, Autoplay]" :spaceBetween="10" :centeredSlides="true" :slides-per-view="1"
-          :space-between="10" @slideChange="onSlideChange" :loop="true"
-          :autoplay="{ 'delay': 1000, 'disableOnInteraction': false }" style="width:100%;height: 100%;">
+          :space-between="10" :loop="true" :autoplay="{ 'delay': 1000, 'disableOnInteraction': false }"
+          style="width:100%;height: 100%;">
           <swiper-slide v-for="url in urls" :key="url.id">
             <div class="slide">
               <img :src="url.url" class="imgt" />
@@ -56,6 +56,7 @@ export default {
         { url: "https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png", id: 15, title: "Docker" },
         { url: "https://www.oracle.com/a/ocom/img/pl-sql.svg", id: 16, title: "SQL & PL/SQL" },
         { url: "https://kelvinfan001.github.io/assets/img/actix/logo-large.png", id: 17, title: "Actix Web" },
+        { url: "https://store-speedtree-com.exactdn.com/site-assets/uploads/Unity-Logo-White.png?strip=all&lossy=1&quality=73&zoom=1&resize=1200%2C720&ssl=1", id: 18, title: "Unity 3D" },
       ]
     }
   },
@@ -63,11 +64,11 @@ export default {
     /* const onSwiper = (swiper) => { */
     /*   console.log(swiper); */
     /* }; */
-    const onSlideChange = () => {
-      console.log('slide change');
-    };
+    /* const onSlideChange = () => { */
+    /*   console.log('slide change'); */
+    /* }; */
     return {
-      onSlideChange,
+
     };
   }
 }
