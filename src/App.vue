@@ -40,6 +40,7 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
 
 body {
   margin: 0;
